@@ -26,3 +26,19 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 ## Answer
 
+| Test | Explication |
+|:----:|-------------|
+|   ""   |   une chaine de caractère vide est balanced    |
+|“([])”|  une chaîne de caractère simple qui est balanced|
+|   “{hello    }”   | une chaîne de caractère quelconque balanced.|
+|   “[“   | edge case avec seulement un crochet ouvrant.|
+|   “]”   | edge case avec seulement un crochet fermant.|
+|   “[{(“   |  que des ouvertures.|
+|   “])}”   |    que des fermetures.|
+|   “(( [] ] ))”   | un caractère ‘]’ en trop.|
+|“hello [[[{ hello } () ]] () ]”| une chaîne de caractère quelconque un peu plus compliquée.|
+
+4. Avec ces tests, on obtient un score de 94% de mutants tués (17 sur 18) :
+    ![alt premiere image](./mutant_tests1.png)
+    Le mutant qui n'a pas été tué est un mutant est un mutant de type `True returns Mutator (TRUE_RETURNS)`.
+    Ce mutant remplace une expression booléenne par true.
