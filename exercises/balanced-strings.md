@@ -40,5 +40,5 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 4. Avec ces tests, on obtient un score de 94% de mutants tués (17 sur 18) :
     ![alt premiere image](./mutant_tests1.png)
-    Le mutant qui n'a pas été tué est un mutant est un mutant de type `True returns Mutator (TRUE_RETURNS)`.
+    Le mutant qui n'a pas été tué est un mutant de type `True returns Mutator (TRUE_RETURNS)`.
     Ce mutant remplace une expression booléenne par true.
