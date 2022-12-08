@@ -26,19 +26,22 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 ## Answer
 
-| Test | Explication |
-|:----:|-------------|
-|   ""   |   une chaine de caractère vide est balanced    |
-|“([])”|  une chaîne de caractère simple qui est balanced|
-|   “{hello    }”   | une chaîne de caractère quelconque balanced.|
-|   “[“   | edge case avec seulement un crochet ouvrant.|
-|   “]”   | edge case avec seulement un crochet fermant.|
-|   “[{(“   |  que des ouvertures.|
-|   “])}”   |    que des fermetures.|
-|   “(( [] ] ))”   | un caractère ‘]’ en trop.|
-|“hello [[[{ hello } () ]] () ]”| une chaîne de caractère quelconque un peu plus compliquée.|
+Pour couvrir un maximum de cas, nous avons testé la fonction sur des chaînes de caractères quelconques de tailles variables. Il faut aussi tester les edges cases comme une chaine de caractère vide ou une chaine de caractère contenant un seul symbole ouvrant ou fermant. La fonction est aussi testée avec une chaine de caractère contenant que des symboles ouvrant ou que des symboles fermant.
+
+
+|              Test               | Explication                                                |
+|:-------------------------------:|------------------------------------------------------------|
+|               ""                | une chaine de caractère vide est balanced                  |
+|             “([])”              | une chaîne de caractère simple qui est balanced            |
+|          “{hello    }”          | une chaîne de caractère quelconque balanced.               |
+|               “[“               | edge case avec seulement un crochet ouvrant.               |
+|               “]”               | edge case avec seulement un crochet fermant.               |
+|              “[{(“              | que des ouvertures.                                        |
+|              “])}”              | que des fermetures.                                        |
+|          “(( [] ] ))”           | un caractère ‘]’ en trop.                                  |
+| “hello [[[{ hello } () ]] () ]” | une chaîne de caractère quelconque un peu plus compliquée. |
 
 4. Avec ces tests, on obtient un score de 94% de mutants tués (17 sur 18) :
-    ![alt premiere image](./mutant_tests1.png)
+    ![alt image mutant test](./mutant_tests1.png)
     Le mutant qui n'a pas été tué est un mutant est un mutant de type `True returns Mutator (TRUE_RETURNS)`.
     Ce mutant remplace une expression booléenne par true.

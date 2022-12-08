@@ -60,6 +60,13 @@ class DateTest {
         date = new Date(28, 2, 2025);
         assertEquals(new Date(1, 3, 2025), date.nextDate());
 
+        int N = 1000;
+        date = new Date(1, 1, 1970);
+        for (int i = 0; i < N; i++) {
+            assertTrue(Date.isValidDate(date.getDay(), date.getMonth(), date.getYear()));
+            date = date.nextDate();
+        }
+
     }
 
     @Test

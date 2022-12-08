@@ -53,3 +53,31 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 ## Answer
 
+Explication des tests :
+
+| Test | Explication |
+|:------------------------------:|-------------|
+| Date(1, 12, 2024) |   cette date existe  |
+| Date(31, 9, 2024) |  cette date n’existe pas (wrong day)|
+| Date(24, 13, 2024) | cette date n’existe pas (wrong month)|
+|  Date(29, 2, 2022) | cette date n’existe pas (not a leap  year)|
+|  Date(29, 2, 2024)  | cette date existe (leap year)|
+|   isLeapYear(2024) == true)   | “2024” est une année bisextile|
+|   isLeapYear(2022) == false)  | “2022” est une année bisextile|
+|  Date(1, 12, 2024).nextDate()	| “2/12/2024” existe	|
+|  Date(28, 2, 2024).nextDate() |”29/02/2024” existe 	|
+| Date(28, 2, 2025).nextDate()	|”29/02/2025” n’existe pas	|
+| Date(2, 12, 2024).previousDate()|”1/12/2024” n’existe pas	|
+|Date(1, 1, 2024).previousDate()	|”31/12/2023” n’existe pas	|
+|Date(1, 3, 2024).previousDate()|”29/02/2024” existe	|
+|Date(1, 3, 2025).previousDate()	|”28/02/2025” n’existe pas	|
+
+Et en plus, on a testé sur 1000 jours consécutifs si la date est correcte en partant du 1er janvier 1970.
+
+4. Avec ces tests, on obtient un score de 84% de mutants tués (76 sur 90) :
+   ![alt image mutant test](./mutant_tests2.png)
+
+
+
+
+

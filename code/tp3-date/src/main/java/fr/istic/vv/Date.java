@@ -19,7 +19,7 @@ class Date implements Comparable<Date> {
         }
     }
 
-    public boolean isValidDate(int day, int month, int year) {
+    public static boolean isValidDate(int day, int month, int year) {
         List<Integer> listMonth31 = Arrays.asList(1, 3, 5, 7, 8, 10, 12);
         if (month <= 0 || month >= 13) {
             return false;

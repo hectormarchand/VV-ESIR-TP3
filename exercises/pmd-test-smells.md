@@ -15,3 +15,18 @@ Include the improved test code in this file.
 
 ## Answer
 
+En utilisant le fichier DetachedTestCase.md à l’aide de PMD, on peut repérer les méthodes de test qui n’ont pas d’annotation @Test ou @Ignore.
+Par exemple, dans le fichier :  
+**commons-collections\src\test\java\org\apache\commons\collections4\IterableUtilsTest.java**,
+la fonction de test getFromIterable ne possède pas d’annotation (ligne 337).
+
+```java
+public void getFromIterable() throws Exception {
+        // Collection, entry exists
+        final Bag<String> bag = new HashBag<>();
+        bag.add("element", 1);
+        assertEquals("element", IterableUtils.get(bag, 0));
+    }
+```
+
+Pour corriger cela, on ajoute l’annotation @Test si c’est un test ou @Ignore si on veut ignorer le test.

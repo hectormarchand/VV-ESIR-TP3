@@ -40,3 +40,18 @@ Use the following steps to design the test suite:
 Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
 
 ## Answer
+
+On utilise un comparateur sur les Integers pour tester notre Binary Heap.
+
+| Test | Explication |
+|:------------------------------:|-------------|
+| [5,3].peek() |   on obtient bien “3” |
+| [7,6,5,3].peek() |   on obtient bien “3”)|
+|   [7,6,5,3].pop()   | on obtient “3” et la heap devient [7,6,5,4]|
+|   isLeapYear(2022) == false)  | “2022” est une année bisextile|
+
+De plus, on a remplit la heap avec 1000 entiers dans l'ordre décroissant : aucune erreur d'éxécution.
+Ensuite, on vide la heap en s'assurant que l'entier retourné par la méthode pop() est le bon.
+
+4. On éxécute ensuite un test de mutant : 89% sont tués, soit 31 sur 35.
+![alt image mutant test](./mutant_test3.png)

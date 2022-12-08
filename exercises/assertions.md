@@ -20,7 +20,7 @@ Answer the following questions:
 
 2. ‘assertSame’ : Affirme que deux Objets font référence au même objet en mémoire (obj1 == obj2 en java). S'ils ne sont pas identiques, une ‘AssertionError’ sans message est lancée.
    ‘assertEquals’ : assure que les deux objets référencés ont le même contenu (obj1.equals(obj2) en java).       
-    Même résultat : 
+    Même résultat : [assertions.md](assertions.md)
     
    ```java 
     String s1 = new String("hello");
