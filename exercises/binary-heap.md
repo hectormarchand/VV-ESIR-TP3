@@ -50,8 +50,9 @@ On utilise un comparateur sur les Integers pour tester notre Binary Heap.
 |   [7,6,5,3].pop()   | on obtient “3” et la heap devient [7,6,5,4]|
 |   isLeapYear(2022) == false)  | “2022” est une année bisextile|
 
-De plus, on a remplit la heap avec 1000 entiers dans l'ordre décroissant : aucune erreur d'éxécution.
-Ensuite, on vide la heap en s'assurant que l'entier retourné par la méthode pop() est le bon.
+De plus, on a remplit la heap avec 1000 entiers dans l'ordre décroissant : aucune erreur d'éxécution.  
+Ensuite, on vide la heap en s'assurant que l'entier retourné par la méthode pop() est le bon.  
+On vérifie aussi que la méthode count() retourne bien la bonne taille : on insère puis on retire 1000 entiers dans la heap et on test.
 
 4. On éxécute ensuite un test de mutant : 89% sont tués, soit 31 sur 35.
 ![alt image mutant test](./mutant_test3.png)
